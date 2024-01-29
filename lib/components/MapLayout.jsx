@@ -1,0 +1,44 @@
+import React from "react";
+import { Grid, GridColumn, GridColumnWrapper, CornerSnap } from "./layout";
+import { ReduxBundlerProvider } from "redux-bundler-hook";
+import ThemeProvider from "./ThemeProvider";
+import createStore from "../store";
+
+const store = createStore();
+window.store = store;
+
+const MapLayout = ({
+  topToolbar = null,
+  bottomToolbar = null,
+  rightToolbar = null,
+  leftSidebar = null,
+  children,
+}) => {
+  return (
+    <ReduxBundlerProvider store={store}>
+      <ThemeProvider>
+        <Grid>
+          <GridColumnWrapper>{leftSidebar}</GridColumnWrapper>
+
+          <GridColumnWrapper>
+            <GridColumn>
+              {children}
+              {topToolbar}
+              <CornerSnap corner="top-right">{rightToolbar}</CornerSnap>
+              <CornerSnap corner="bottom-right">{bottomToolbar}</CornerSnap>
+            </GridColumn>
+          </GridColumnWrapper>
+
+          <GridColumnWrapper width={1}>
+            <GridColumn>
+              <CornerSnap corner="bottom-right">{bottomToolbar}</CornerSnap>
+            </GridColumn>
+          </GridColumnWrapper>
+        </Grid>
+      </ThemeProvider>
+    </ReduxBundlerProvider>
+  );
+};
+
+export default MapLayout;
+export { MapLayout };
