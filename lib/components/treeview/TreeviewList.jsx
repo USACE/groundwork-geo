@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import TreeviewListItem from "./TreeViewListItem";
+import TreeviewListItem from "./TreeviewListItem";
 
 const TreeviewList = styled(({ nodes, showBorder = false, ...props }) => {
   return (
