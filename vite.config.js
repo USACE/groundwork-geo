@@ -7,6 +7,7 @@ export default defineConfig({
   publicDir: false,
   build: {
     lib: {
+      main: "index.html",
       entry: "lib/index.js",
       name: "Groundwork-Geo",
       fileName: (format) => `groundwork-geo.${format}.js`,
