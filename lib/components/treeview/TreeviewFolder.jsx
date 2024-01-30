@@ -48,3 +48,4 @@ const TreeviewFolder = styled(({ node, ...props }) => {
 `;
 
 export default TreeviewFolder;
+export { TreeviewFolder };

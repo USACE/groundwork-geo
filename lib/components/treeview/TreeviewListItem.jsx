@@ -10,3 +10,4 @@ const TreeviewListItem = ({ node }) => {
 };
 
 export default TreeviewListItem;
+export { TreeviewListItem };

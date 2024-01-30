@@ -17,3 +17,4 @@ const TreeviewList = styled(({ nodes, showBorder = false, ...props }) => {
 `;
 
 export default TreeviewList;
+export { TreeviewList };

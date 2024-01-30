@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styled from "styled-components";
 import TreeviewList from "./TreeviewList";
 import { DatabaseIcon, RasterIcon } from "@corpsmap/map-icons-react";

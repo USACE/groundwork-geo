@@ -45,3 +45,4 @@ const TreeviewLeaf = styled(({ node, onSelect, ...props }) => {
 `;
 
 export default TreeviewLeaf;
+export { TreeviewLeaf };
