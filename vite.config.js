@@ -25,10 +25,11 @@ export default defineConfig(({ command, mode }) => {
       },
     };
   } else {
-    const homepage = "https://usace.github.io/groundwork-geo";
+    const base =
+      mode === "production" ? "https://usace.github.io/groundwork-geo" : "/";
     return {
       plugins: [react()],
-      base: mode === "production" ? homepage : "/",
+      base: base,
       build: {
         outDir: "docs",
       },
