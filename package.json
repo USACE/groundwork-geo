@@ -3,11 +3,13 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "main": "./dist/map-icons-react.umd.cjs",
-  "module": "./dist/map-icons-react.es.js",
+  "main": "./dist/groundwork-geo.umd.cjs",
+  "module": "./dist/groundwork-geo.es.js",
   "exports": {
-    "import": "./dist/groundwork-geo.es.js",
-    "require": "./dist/groundwork-geo.umd.cjs"
+    ".": {
+      "import": "./dist/groundwork-geo.es.js",
+      "require": "./dist/groundwork-geo.umd.cjs"
+    }
   },
   "license": "MIT",
   "files": [
@@ -15,7 +17,9 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run build-lib && npm run build-docs",
+    "build-lib": "vite build",
+    "build-docs": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "pub": "npm run build && npm publish --access=public",
