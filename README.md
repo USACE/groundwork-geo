@@ -1,8 +1,9 @@
-# React + Vite
+# Groundwork-Geo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the next generation of mapping framework for USACE. Built on top of [Cesium JS](https://cesium.com/platform/cesiumjs/) with some simple React utility components, Groundwork-Geo gives you a good foundation to build on without getting in your way.
 
-Currently, two official plugins are available:
+Preview Site: [https://usace.github.io/groundwork-geo/](https://usace.github.io/groundwork-geo/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Developer Docs: [https://github.com/USACE/groundwork-geo/wiki](https://github.com/USACE/groundwork-geo/wiki)
+
+License: MIT
