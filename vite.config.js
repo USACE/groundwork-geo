@@ -3,7 +3,8 @@ import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
-  if (command === "build-lib") {
+  if (mode === "lib") {
+    console.log("Building library");
     return {
       plugins: [react()],
       publicDir: false,
@@ -19,12 +20,14 @@ export default defineConfig(({ command, mode }) => {
             globals: {
               react: "React",
               "react-dom": "ReactDOM",
+              cesium: "Cesium",
             },
           },
         },
       },
     };
   } else {
+    console.log("Building preview app");
     const base =
       mode === "production" ? "https://usace.github.io/groundwork-geo" : "/";
     return {
