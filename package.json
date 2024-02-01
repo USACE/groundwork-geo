@@ -1,6 +1,6 @@
 {
   "name": "@usace/groundwork-geo",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "type": "module",
   "main": "./dist/groundwork-geo.umd.cjs",
   "module": "./dist/groundwork-geo.es.js",
