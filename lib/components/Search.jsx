@@ -202,7 +202,7 @@ const SearchTool = styled(
                 onSelect={handleSelect}
                 result={result}
               >
-                {result.place_name}
+                {result._text || result.place_name}
               </SearchResultsListItem>
             ))}
           </SearchResultsList>
@@ -218,12 +218,23 @@ const SearchTool = styled(
   width: 100%;
 `;
 
-const Search = ({ children, results, onClear, ...props }) => {
+const Search = ({
+  children,
+  onChange,
+  onClear,
+  onSelect,
+  value,
+  results,
+  ...props
+}) => {
   const [active, setActive] = useState(false);
   if (active) {
     return (
       <SearchTool
         {...props}
+        onChange={onChange}
+        onSelect={onSelect}
+        value={value}
         results={results}
         onClear={() => {
           setActive(false);

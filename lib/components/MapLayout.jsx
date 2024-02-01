@@ -12,11 +12,12 @@ const MapLayout = ({
   bottomToolbar = null,
   rightToolbar = null,
   leftSidebar = null,
+  theme = null,
   children,
 }) => {
   return (
     <ReduxBundlerProvider store={store}>
-      <ThemeProvider>
+      <ThemeProvider theme={theme}>
         <Grid>
           <GridColumnWrapper>{leftSidebar}</GridColumnWrapper>
 
