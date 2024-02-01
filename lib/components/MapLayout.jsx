@@ -12,7 +12,7 @@ const MapLayout = ({
   bottomToolbar = null,
   rightToolbar = null,
   leftSidebar = null,
-  theme = null,
+  theme = undefined,
   children,
 }) => {
   return (

@@ -29,7 +29,7 @@ export default defineConfig(({ command, mode }) => {
   } else {
     console.log("Building preview app");
     const base =
-      mode === "production" ? "https://usace.github.io/groundwork-geo" : "/";
+      mode === "production" ? "https://usace.github.io/groundwork-geo/" : "";
     return {
       plugins: [react()],
       base: base,
