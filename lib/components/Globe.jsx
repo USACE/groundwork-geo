@@ -6,6 +6,8 @@ const Globe = styled(
   ({
     onMount,
     options = {},
+    ionAccessToken = null,
+    esriAccessToken = null,
     layers = [],
     initialPosition = null,
     ...props
@@ -27,6 +29,8 @@ const Globe = styled(
       doGlobeInitialize({
         el: elRef.current,
         options: options,
+        ionAccessToken: ionAccessToken,
+        esriAccessToken: esriAccessToken,
         onMount: onMount,
         initialPosition: initialPosition,
       });
