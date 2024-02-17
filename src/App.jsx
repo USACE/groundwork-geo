@@ -60,6 +60,7 @@ function App() {
     <Container>
       <MapLayout leftSidebar={<LeftSidebar />} topToolbar={<TopToolbar />}>
         <Globe
+          ionAccessToken={import.meta.env.VITE_ION_ACCESS_TOKEN}
           onMount={handleGlobeMount}
           initialPosition={{
             lon: -94.566709,
