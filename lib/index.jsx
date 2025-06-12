@@ -15,3 +15,4 @@ export { cobalt } from "./themes/cobalt";
 export { LayerTree } from "./tools/layer-tree";
 
 // export { Map } from "./lib/components"
+console.log("TEST");
