@@ -1,7 +1,8 @@
 {
-  "name": "@usace/groundwork-geo",
-  "version": "1.1.0",
+  "name": "groundwork-geo",
+  "version": "0.0.0",
   "type": "module",
+  "description": "A mapping library to accompany groundwork",
   "main": "./dist/groundwork-geo.umd.cjs",
   "module": "./dist/groundwork-geo.es.js",
   "exports": {
@@ -16,38 +17,34 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "npm run build-lib && npm run build-docs",
+    "build": "npm run build-lib",
     "build-lib": "vite build -m lib",
-    "build-docs": "vite build",
+    "pub": "npm run build-lib && npm publish --access=public",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "pub": "npm run build-lib && npm publish --access=public",
-    "major": "npm version major && npm run pub",
-    "minor": "npm version minor && npm run pub",
-    "patch": "npm version patch && npm run pub"
+    "test": "vitest"
   },
   "dependencies": {
-    "@corpsmap/map-icons-react": "^1.1.2",
     "money-clip": "^3.0.5",
-    "react-icons": "^4.12.0",
+    "ol": "^10.2.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.0.1",
     "redux-bundler": "^28.1.0",
     "redux-bundler-hook": "^1.0.3",
     "redux-bundler-react": "^1.2.0",
-    "styled-components": "^6.1.6"
-  },
-  "peerDependencies": {
-    "cesium": "^1.113.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
-    "@types/react": "^18.2.43",
-    "@types/react-dom": "^18.2.17",
-    "@vitejs/plugin-react": "^4.2.1",
-    "eslint": "^8.55.0",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.5",
-    "vite": "^5.0.12"
+    "@eslint/js": "^9.13.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "eslint": "^9.13.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "globals": "^15.11.0",
+    "vite": "^5.4.10"
   }
 }

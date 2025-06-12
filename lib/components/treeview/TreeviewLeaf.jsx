@@ -6,7 +6,12 @@ const TreeviewLeaf = styled(({ node, onSelect, ...props }) => {
   const [selected, setSelected] = useState(node.layer.show);
 
   const handleSelect = () => {
-    node.toggle(setSelected);
+    if (selected) {
+      node.layer.setStyle(null)
+    } else {
+      node.layer.setStyle(node.style)
+    }
+    setSelected(!selected)
   };
 
   const CustomIcon = node.icon;

@@ -1,0 +1,29 @@
+.Legend {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 10px;
+    color: #394b59;
+    background-color: #f8f8f8;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    background-clip: padding-box;
+    border-radius: 3px;
+    z-index: 10;
+}
+
+.Circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+}
+
+.Square {
+    width: 16px;
+    height: 16px;
+}
+
+.Unregulated {
+    background-color: rgb(0, 255, 0);
+    /* border-color: black; */
+    border: 2px solid black;
+}

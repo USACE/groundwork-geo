@@ -1,12 +1,16 @@
 import styled from "styled-components";
 import React, { useEffect } from "react";
 import { useConnect } from "redux-bundler-hook";
-import makeResizable from "../utils/makeResizable";
+// import makeResizable from "../utils/makeResizable";
 
 const PanelBody = styled.div`
+  position: absolute;
+  top: 35px;
+  height: auto;
   background-color: ${(props) => props.theme.colors.panel.background};
   color: ${(props) => props.theme.colors.panel.foreground};
-  height: 100%;
+  width: 100%;
+  overflow: scroll;
   --resizable-width: 300px;
   width: var(--resizable-width);
 `;
@@ -20,7 +24,7 @@ const Handle = styled.div`
   transition: width 0.2s ease-in-out;
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.panel.resizeHandle};
+    background-color: blue;
     width: 6px;
   }
 
@@ -40,20 +44,17 @@ const Handle = styled.div`
 const Panel = (props) => {
   const panelRef = React.useRef(null);
   const handleRef = React.useRef(null);
-  const { panelSizeWidth, doPanelSizeSetWidth } = useConnect(
-    "selectPanelSizeWidth",
-    "doPanelSizeSetWidth"
-  );
 
-  useEffect(() => {
-    if (!panelRef.current || !handleRef.current) return;
-    makeResizable(
-      panelRef.current,
-      handleRef.current,
-      panelSizeWidth,
-      doPanelSizeSetWidth
-    );
-  }, [handleRef.current]);
+
+  // useEffect(() => {
+  //     if (!panelRef.current || !handleRef.current) return;
+  //     makeResizable(
+  //         panelRef.current,
+  //         handleRef.current,
+  //         panelSizeWidth,
+  //         doPanelSizeSetWidth
+  //     );
+  // }, [handleRef.current]);
 
   return (
     <PanelBody {...props} ref={panelRef}>
