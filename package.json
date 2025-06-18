@@ -1,6 +1,6 @@
 {
   "name": "@usace/groundwork-geo",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "type": "module",
   "description": "A mapping library to accompany groundwork",
   "main": "./dist/groundwork-geo.umd.cjs",
