@@ -45,7 +45,6 @@ const Panel = (props) => {
   const panelRef = React.useRef(null);
   const handleRef = React.useRef(null);
 
-
   // useEffect(() => {
   //     if (!panelRef.current || !handleRef.current) return;
   //     makeResizable(
@@ -64,4 +63,5 @@ const Panel = (props) => {
   );
 };
 
+export default Panel;
 export { Panel };
