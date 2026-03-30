@@ -27,6 +27,10 @@ Install from npm:
 npm install @usace/groundwork-geo
 ```
 
+Package page:
+
+- https://www.npmjs.com/package/@usace/groundwork-geo
+
 This package is built with:
 
 - React
