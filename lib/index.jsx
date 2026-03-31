@@ -13,6 +13,3 @@ export { BasemapPicker } from "./tools/basemap-picker";
 export { Panel } from "./components/panel";
 export { cobalt } from "./themes/cobalt";
 export { LayerTree } from "./tools/layer-tree";
-
-// export { Map } from "./lib/components"
-console.log("TEST");
