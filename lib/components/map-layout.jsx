@@ -1,11 +1,8 @@
 import React from "react";
 import { Grid, GridColumn, GridColumnWrapper, CornerSnap } from "../layout";
 import { ReduxBundlerProvider } from "redux-bundler-hook";
-import createStore from "../store";
+import store from "../store/app-store.js";
 import ThemeProvider from "./theme-provider";
-
-const store = createStore();
-window.store = store;
 
 const MapLayout = ({
     topToolbar = null,
