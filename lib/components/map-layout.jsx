@@ -1,4 +1,3 @@
-import React from "react";
 import { Grid, GridColumn, GridColumnWrapper, CornerSnap } from "../layout";
 import { ReduxBundlerProvider } from "redux-bundler-hook";
 import store from "../store/app-store.js";
