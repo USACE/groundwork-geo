@@ -8,7 +8,6 @@ import { ActivityBar } from "./activity-bar";
  */
 const Toolbar = styled(({ tools, ...props }) => {
     const [activeTool, setActiveTool] = useState(null);
-    const ActiveToolPanel = activeTool?.Panel;
     return (
         <div {...props}>
             <ActivityBar>
@@ -27,7 +26,7 @@ const Toolbar = styled(({ tools, ...props }) => {
                     );
                 })}
             </ActivityBar>
-            {!!activeTool && <ActiveToolPanel />}
+            {!!activeTool && <activeTool.Panel />}
         </div>
     );
 })`

@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import React, { useEffect } from "react";
-import { useConnect } from "redux-bundler-hook";
+import { useRef } from "react";
 // import makeResizable from "../utils/makeResizable";
 
 const PanelBody = styled.div`
@@ -42,8 +41,8 @@ const Handle = styled.div`
 `;
 
 const Panel = (props) => {
-  const panelRef = React.useRef(null);
-  const handleRef = React.useRef(null);
+  const panelRef = useRef(null);
+  const handleRef = useRef(null);
 
   // useEffect(() => {
   //     if (!panelRef.current || !handleRef.current) return;
