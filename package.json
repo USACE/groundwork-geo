@@ -3,6 +3,10 @@
   "version": "2.1.0",
   "type": "module",
   "description": "A mapping library to accompany groundwork",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/USACE/groundwork-geo.git"
+  },
   "main": "./dist/groundwork-geo.umd.cjs",
   "module": "./dist/groundwork-geo.es.js",
   "exports": {
