@@ -20,11 +20,12 @@ export default defineConfig(({ mode }) => {
                     entry: "lib/index.jsx",
                 },
                 rollupOptions: {
-                    external: ["react", "react-dom"],
+                    external: ["react", "react-dom", "react/jsx-runtime"],
                     output: {
                         globals: {
                             react: "React",
                             "react-dom": "ReactDOM",
+                            "react/jsx-runtime": "jsxRuntime",
                         },
                     },
                 },
