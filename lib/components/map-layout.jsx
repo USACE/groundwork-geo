@@ -14,7 +14,7 @@ const MapLayout = ({
     return (
         <ReduxBundlerProvider store={store}>
             <ThemeProvider theme={theme}>
-                <Grid>
+                <Grid style={{ isolation: "isolate", position: "relative", zIndex: 0 }}>
                     <GridColumnWrapper>{leftSidebar}</GridColumnWrapper>
 
                     <GridColumnWrapper>

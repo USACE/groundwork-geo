@@ -1,6 +1,7 @@
 // mapping components
 export { Map } from "./components/map";
 export { MapLayout } from "./components/map-layout";
+export { MapSideControl } from "./components/map-side-control.jsx";
 export { DEFAULT_STATUS_LEGEND_ITEMS, StatusLegend } from "./components/status-legend.jsx";
 export { Layer } from "./classes/layer.js";
 export { GeoJSONLayer } from "./classes/geojson-layer.js";
