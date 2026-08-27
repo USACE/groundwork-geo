@@ -5,7 +5,7 @@ import 'ol/ol.css';
 // import LayerToggle from './map-controls/layer-switcher';
 
 
-function Map({ mapId, layers, viewConfig }) {
+function Map({ mapId, layers, viewConfig, controls }) {
     const mapEl = useRef();
     const {
         doMapsInitialize,
@@ -23,7 +23,8 @@ function Map({ mapId, layers, viewConfig }) {
         doMapsInitialize({
             id: mapId,
             target: mapEl.current,
-            viewConfig: viewConfig
+            viewConfig: viewConfig,
+            controls: controls
         });
         doBasemapsInitialize(mapId)
     }, [mapEl.current]);
